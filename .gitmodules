@@ -1,0 +1,4 @@
+[submodule "nokogiri"]
+	path = nokogiri
+	url = https://github.com/sparklemotion/nokogiri
+	branch = flavorjones/bundler-deadlock-ref
