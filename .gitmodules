@@ -2,3 +2,6 @@
 	path = nokogiri
 	url = https://github.com/sparklemotion/nokogiri
 	branch = flavorjones/bundler-deadlock-ref
+[submodule "rails"]
+	path = rails
+	url = https://github.com/rails/rails
