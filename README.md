@@ -1,4 +1,4 @@
-This repository is an attempt to reproduce the bundler deadlock issue.
+This repository is an attempt to reproduce the bundler deadlock issue reported at https://github.com/rubygems/rubygems/issues/8972
 
 To repro, first make sure you've checked out the submodules:
 
