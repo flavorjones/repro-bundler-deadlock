@@ -1,3 +1,11 @@
+Fetching gem metadata from https://rubygems.org/.
+Updating bundler to 2.7.2.
+Fetching gem metadata from https://rubygems.org/.
+Fetching gem metadata from https://rubygems.org/.........
+Resolving dependencies...
+Bundle updated!
+1 installed gem you directly depend on is looking for funding.
+  Run `bundle fund` for details
 Removing gems from /home/flavorjones/tmp/repro-bundler-deadlock/rails/Gemfile
 nokogiri (>= 1.8.1, != 1.11.0) ruby, windows was removed.
 Fetching gem metadata from https://rubygems.org/.........
@@ -8,105 +16,105 @@ Resolving dependencies...
 
 ```
 fatal: No live threads left. Deadlock?
-22 threads, 22 sleeps current:0x0000559d3d34dde0 main thread:0x0000559d3c5b2900
-* #<Thread:0x00007f8c28e5a6a8 sleep_forever>
-   rb_thread_t:0x0000559d3c5b2900 native:0x00007f8c296ffc00 int:0
+22 threads, 22 sleeps current:0x0000558979d1bdb0 main thread:0x00005589792ff900
+* #<Thread:0x00007fca2284a6b8 sleep_forever>
+   rb_thread_t:0x00005589792ff900 native:0x00007fca230ddc00 int:0
    
-* #<Thread:0x00007f8c0cc4d0c0@Gem::Timeout stdlib thread /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/3.4.0/rubygems/vendor/timeout/lib/timeout.rb:95 sleep_forever>
-   rb_thread_t:0x0000559d3d34dde0 native:0x00007f8c0bf5e6c0 int:0
+* #<Thread:0x00007fca05dc3f58@Gem::Timeout stdlib thread /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/3.4.0/rubygems/vendor/timeout/lib/timeout.rb:95 sleep_forever>
+   rb_thread_t:0x0000558979d1bdb0 native:0x00007fca0592e6c0 int:0
    
-* #<Thread:0x00007f8ba80cce08@Parallel Installer Worker #0 /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.0/lib/bundler/worker.rb:90 sleep_forever>
-   rb_thread_t:0x0000559d406f4a80 native:0x00007f8bfa7e46c0 int:0
+* #<Thread:0x00007fc9a146d418@Parallel Installer Worker #0 /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.2/lib/bundler/worker.rb:90 sleep_forever>
+   rb_thread_t:0x000055897ce08bb0 native:0x00007fca011d96c0 int:0
    
-* #<Thread:0x00007f8ba80ccd18@Parallel Installer Worker #1 /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.0/lib/bundler/worker.rb:90 sleep_forever>
-   rb_thread_t:0x0000559d406e28a0 native:0x00007f8bf9fdc6c0 int:0
+* #<Thread:0x00007fc9a146d328@Parallel Installer Worker #1 /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.2/lib/bundler/worker.rb:90 sleep_forever>
+   rb_thread_t:0x000055897ce10030 native:0x00007fca00cd46c0 int:0
    
-* #<Thread:0x00007f8ba80ccc28@Parallel Installer Worker #2 /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.0/lib/bundler/worker.rb:90 sleep_forever>
-   rb_thread_t:0x0000559d406ce2c0 native:0x00007f8bfa6e36c0 int:0
+* #<Thread:0x00007fc9a146d238@Parallel Installer Worker #2 /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.2/lib/bundler/worker.rb:90 sleep_forever>
+   rb_thread_t:0x000055897cdf7910 native:0x00007fca00ad26c0 int:0
    
-* #<Thread:0x00007f8ba80ccb38@Parallel Installer Worker #3 /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.0/lib/bundler/worker.rb:90 sleep_forever>
-   rb_thread_t:0x0000559d406e1580 native:0x00007f8bfa5e26c0 int:0
+* #<Thread:0x00007fc9a146d148@Parallel Installer Worker #3 /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.2/lib/bundler/worker.rb:90 sleep_forever>
+   rb_thread_t:0x000055897cdf19f0 native:0x00007fca00bd36c0 int:0
    
-* #<Thread:0x00007f8ba80cca48@Parallel Installer Worker #4 /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.0/lib/bundler/worker.rb:90 sleep_forever>
-   rb_thread_t:0x0000559d406b0b10 native:0x00007f8bfa4e16c0 int:0
+* #<Thread:0x00007fc9a146d058@Parallel Installer Worker #4 /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.2/lib/bundler/worker.rb:90 sleep_forever>
+   rb_thread_t:0x000055897cdd7ca0 native:0x00007fca012da6c0 int:0
    
-* #<Thread:0x00007f8ba80cc958@Parallel Installer Worker #5 /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.0/lib/bundler/worker.rb:90 sleep_forever>
-   rb_thread_t:0x0000559d40735b70 native:0x00007f8bfa8e56c0 int:0
+* #<Thread:0x00007fc9a146cf68@Parallel Installer Worker #5 /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.2/lib/bundler/worker.rb:90 sleep_forever>
+   rb_thread_t:0x000055897ce47dc0 native:0x00007fc9f357f6c0 int:0
    
-* #<Thread:0x00007f8ba80cc868@Parallel Installer Worker #6 /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.0/lib/bundler/worker.rb:90 sleep_forever>
-   rb_thread_t:0x0000559d40711f20 native:0x00007f8bfaae76c0 int:0
+* #<Thread:0x00007fc9a146ce78@Parallel Installer Worker #6 /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.2/lib/bundler/worker.rb:90 sleep_forever>
+   rb_thread_t:0x000055897cec9f60 native:0x00007fca009d16c0 int:0
    
-* #<Thread:0x00007f8ba80cc778@Parallel Installer Worker #7 /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.0/lib/bundler/worker.rb:90 sleep_forever>
-   rb_thread_t:0x0000559d40724ac0 native:0x00007f8bfaeeb6c0 int:0
+* #<Thread:0x00007fc9a146cd88@Parallel Installer Worker #7 /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.2/lib/bundler/worker.rb:90 sleep_forever>
+   rb_thread_t:0x000055897cf08ae0 native:0x00007fca00dd56c0 int:0
    
-* #<Thread:0x00007f8ba80cc688@Parallel Installer Worker #8 /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.0/lib/bundler/worker.rb:90 sleep_forever>
-   rb_thread_t:0x0000559d407c23d0 native:0x00007f8bfa0dd6c0 int:0
+* #<Thread:0x00007fc9a146cc98@Parallel Installer Worker #8 /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.2/lib/bundler/worker.rb:90 sleep_forever>
+   rb_thread_t:0x000055897ce23a80 native:0x00007fca00fd76c0 int:0
    
-* #<Thread:0x00007f8ba80cc598@Parallel Installer Worker #9 /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.0/lib/bundler/worker.rb:90 sleep_forever>
-   rb_thread_t:0x0000559d40791780 native:0x00007f8bfb0ed6c0 int:0
+* #<Thread:0x00007fc9a146cba8@Parallel Installer Worker #9 /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.2/lib/bundler/worker.rb:90 sleep_forever>
+   rb_thread_t:0x000055897ce3b440 native:0x00007fca014dc6c0 int:0
    
-* #<Thread:0x00007f8ba80cc4a8@Parallel Installer Worker #10 /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.0/lib/bundler/worker.rb:90 sleep_forever>
-   rb_thread_t:0x0000559d40783e90 native:0x00007f8bfa2df6c0 int:0
+* #<Thread:0x00007fc9a146cab8@Parallel Installer Worker #10 /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.2/lib/bundler/worker.rb:90 sleep_forever>
+   rb_thread_t:0x000055897ceecb70 native:0x00007fca013db6c0 int:0
    
-* #<Thread:0x00007f8bf957c740@Parallel Installer Worker #11 /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.0/lib/bundler/worker.rb:90 sleep_forever>
-   rb_thread_t:0x0000559d3de5df30 native:0x00007f8bface96c0 int:0
+* #<Thread:0x00007fc9f2b0e8c0@Parallel Installer Worker #11 /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.2/lib/bundler/worker.rb:90 sleep_forever>
+   rb_thread_t:0x000055897a10d290 native:0x00007fca010d86c0 int:0
    
-* #<Thread:0x00007f8bf957a1e8@Parallel Installer Worker #12 /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.0/lib/bundler/worker.rb:90 sleep_forever>
-   rb_thread_t:0x0000559d3de5f120 native:0x00007f8bfabe86c0 int:0
+* #<Thread:0x00007fc9f2b0d588@Parallel Installer Worker #12 /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.2/lib/bundler/worker.rb:90 sleep_forever>
+   rb_thread_t:0x000055897c32e1e0 native:0x00007fca017df6c0 int:0
    
-* #<Thread:0x00007f8bf9573a28@Parallel Installer Worker #13 /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.0/lib/bundler/worker.rb:90 sleep_forever>
-   rb_thread_t:0x0000559d3de5ee90 native:0x00007f8bfafec6c0 int:0
+* #<Thread:0x00007fc9f2b0c6d8@Parallel Installer Worker #13 /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.2/lib/bundler/worker.rb:90 sleep_forever>
+   rb_thread_t:0x000055897c534f70 native:0x00007fc9f337d6c0 int:0
    
-* #<Thread:0x00007f8bf95713e0@Parallel Installer Worker #14 /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.0/lib/bundler/worker.rb:90 sleep_forever>
-   rb_thread_t:0x0000559d3de5ec00 native:0x00007f8bfb1ee6c0 int:0
+* #<Thread:0x00007fc9f2b0af18@Parallel Installer Worker #14 /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.2/lib/bundler/worker.rb:90 sleep_forever>
+   rb_thread_t:0x000055897a706f40 native:0x00007fca007cf6c0 int:0
    
-* #<Thread:0x00007f8bf958dec8@Parallel Installer Worker #15 /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.0/lib/bundler/worker.rb:90 sleep_forever>
-   rb_thread_t:0x0000559d3de5e970 native:0x00007f8bfa1de6c0 int:0
+* #<Thread:0x00007fc9f2b09dc0@Parallel Installer Worker #15 /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.2/lib/bundler/worker.rb:90 sleep_forever>
+   rb_thread_t:0x000055897a0d8960 native:0x00007fc9f347e6c0 int:0
    
-* #<Thread:0x00007f8bf958b8d0@Parallel Installer Worker #16 /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.0/lib/bundler/worker.rb:90 sleep_forever>
-   rb_thread_t:0x0000559d3de5e6e0 native:0x00007f8bfb2ef6c0 int:0
+* #<Thread:0x00007fc9f2b089e8@Parallel Installer Worker #16 /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.2/lib/bundler/worker.rb:90 sleep_forever>
+   rb_thread_t:0x0000558979ded280 native:0x00007fca015dd6c0 int:0
    
-* #<Thread:0x00007f8bf958a908@Parallel Installer Worker #17 /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.0/lib/bundler/worker.rb:90 sleep_forever>
-   rb_thread_t:0x0000559d3de5e450 native:0x00007f8bfadea6c0 int:0
+* #<Thread:0x00007fc9f2b074d0@Parallel Installer Worker #17 /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.2/lib/bundler/worker.rb:90 sleep_forever>
+   rb_thread_t:0x000055897a09f010 native:0x00007fca008d06c0 int:0
    
-* #<Thread:0x00007f8bf9586420@Parallel Installer Worker #18 /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.0/lib/bundler/worker.rb:90 sleep_forever>
-   rb_thread_t:0x0000559d3de5e1c0 native:0x00007f8bfa3e06c0 int:0
+* #<Thread:0x00007fc9f2b059a0@Parallel Installer Worker #18 /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.2/lib/bundler/worker.rb:90 sleep_forever>
+   rb_thread_t:0x0000558979fe2330 native:0x00007fca016de6c0 int:0
    
-* #<Thread:0x00007f8bf9584648@Parallel Installer Worker #19 /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.0/lib/bundler/worker.rb:90 sleep_forever>
-   rb_thread_t:0x0000559d3e7a3e90 native:0x00007f8bfa9e66c0 int:0
+* #<Thread:0x00007fc9f2b04410@Parallel Installer Worker #19 /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.2/lib/bundler/worker.rb:90 sleep_forever>
+   rb_thread_t:0x000055897b2fbf60 native:0x00007fca00ed66c0 int:0
    
 
   <internal:thread_sync>:18:in 'Thread::Queue#pop'
-          /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.0/lib/bundler/worker.rb:42:in 'Bundler::Worker#deq'
-          /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.0/lib/bundler/installer/parallel_installer.rb:151:in 'Bundler::ParallelInstaller#process_specs'
-          /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.0/lib/bundler/installer/parallel_installer.rb:111:in 'Bundler::ParallelInstaller#install_with_worker'
-          /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.0/lib/bundler/installer/parallel_installer.rb:92:in 'Bundler::ParallelInstaller#call'
-          /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.0/lib/bundler/installer/parallel_installer.rb:66:in 'Bundler::ParallelInstaller.call'
-          /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.0/lib/bundler/installer.rb:199:in 'Bundler::Installer#install'
+          /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.2/lib/bundler/worker.rb:42:in 'Bundler::Worker#deq'
+          /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.2/lib/bundler/installer/parallel_installer.rb:151:in 'Bundler::ParallelInstaller#process_specs'
+          /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.2/lib/bundler/installer/parallel_installer.rb:111:in 'Bundler::ParallelInstaller#install_with_worker'
+          /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.2/lib/bundler/installer/parallel_installer.rb:92:in 'Bundler::ParallelInstaller#call'
+          /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.2/lib/bundler/installer/parallel_installer.rb:66:in 'Bundler::ParallelInstaller.call'
+          /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.2/lib/bundler/installer.rb:199:in 'Bundler::Installer#install'
           /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/site_ruby/rubygems_plugin.rb:24:in 'ReshimInstaller#install'
-          /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.0/lib/bundler/installer.rb:84:in 'block in Bundler::Installer#run'
+          /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.2/lib/bundler/installer.rb:84:in 'block in Bundler::Installer#run'
           /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/3.4.0/rubygems.rb:835:in 'block in Gem.open_file_with_flock'
           /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/3.4.0/rubygems.rb:823:in 'IO.open'
           /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/3.4.0/rubygems.rb:823:in 'Gem.open_file_with_flock'
           /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/3.4.0/rubygems.rb:809:in 'Gem.open_file_with_lock'
-          /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.0/lib/bundler/process_lock.rb:13:in 'block in Bundler::ProcessLock.lock'
-          /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.0/lib/bundler/shared_helpers.rb:105:in 'Bundler::SharedHelpers#filesystem_access'
-          /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.0/lib/bundler/process_lock.rb:12:in 'Bundler::ProcessLock.lock'
-          /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.0/lib/bundler/installer.rb:71:in 'Bundler::Installer#run'
-          /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.0/lib/bundler/installer.rb:23:in 'Bundler::Installer.install'
-          /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.0/lib/bundler/cli/install.rb:74:in 'Bundler::CLI::Install#run'
-          /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.0/lib/bundler/cli.rb:247:in 'block in Bundler::CLI#install'
-          /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.0/lib/bundler/settings.rb:157:in 'Bundler::Settings#temporary'
-          /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.0/lib/bundler/cli.rb:246:in 'Bundler::CLI#install'
-          /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.0/lib/bundler/vendor/thor/lib/thor/command.rb:28:in 'Bundler::Thor::Command#run'
-          /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.0/lib/bundler/vendor/thor/lib/thor/invocation.rb:127:in 'Bundler::Thor::Invocation#invoke_command'
-          /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.0/lib/bundler/vendor/thor/lib/thor.rb:538:in 'Bundler::Thor.dispatch'
-          /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.0/lib/bundler/cli.rb:35:in 'Bundler::CLI.dispatch'
-          /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.0/lib/bundler/vendor/thor/lib/thor/base.rb:584:in 'Bundler::Thor::Base::ClassMethods#start'
-          /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.0/lib/bundler/cli.rb:29:in 'Bundler::CLI.start'
-          /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.0/exe/bundle:28:in 'block in <top (required)>'
-          /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.0/lib/bundler/friendly_errors.rb:118:in 'Bundler.with_friendly_errors'
-          /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.0/exe/bundle:20:in '<top (required)>'
+          /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.2/lib/bundler/process_lock.rb:13:in 'block in Bundler::ProcessLock.lock'
+          /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.2/lib/bundler/shared_helpers.rb:105:in 'Bundler::SharedHelpers#filesystem_access'
+          /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.2/lib/bundler/process_lock.rb:12:in 'Bundler::ProcessLock.lock'
+          /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.2/lib/bundler/installer.rb:71:in 'Bundler::Installer#run'
+          /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.2/lib/bundler/installer.rb:23:in 'Bundler::Installer.install'
+          /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.2/lib/bundler/cli/install.rb:72:in 'Bundler::CLI::Install#run'
+          /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.2/lib/bundler/cli.rb:245:in 'block in Bundler::CLI#install'
+          /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.2/lib/bundler/settings.rb:157:in 'Bundler::Settings#temporary'
+          /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.2/lib/bundler/cli.rb:244:in 'Bundler::CLI#install'
+          /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.2/lib/bundler/vendor/thor/lib/thor/command.rb:28:in 'Bundler::Thor::Command#run'
+          /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.2/lib/bundler/vendor/thor/lib/thor/invocation.rb:127:in 'Bundler::Thor::Invocation#invoke_command'
+          /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.2/lib/bundler/vendor/thor/lib/thor.rb:538:in 'Bundler::Thor.dispatch'
+          /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.2/lib/bundler/cli.rb:35:in 'Bundler::CLI.dispatch'
+          /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.2/lib/bundler/vendor/thor/lib/thor/base.rb:584:in 'Bundler::Thor::Base::ClassMethods#start'
+          /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.2/lib/bundler/cli.rb:29:in 'Bundler::CLI.start'
+          /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.2/exe/bundle:28:in 'block in <top (required)>'
+          /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.2/lib/bundler/friendly_errors.rb:118:in 'Bundler.with_friendly_errors'
+          /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.2/exe/bundle:20:in '<top (required)>'
           /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/bin/bundle:25:in 'Kernel#load'
           /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/bin/bundle:25:in '<main>'
 
@@ -115,7 +123,7 @@ fatal: No live threads left. Deadlock?
 ## Environment
 
 ```
-Bundler       2.7.0
+Bundler       2.7.2
   Platforms   ruby, x86_64-linux
 Ruby          3.4.5p51 (2025-07-16 revision 20cda200d3ce092571d0b5d342dadca69636cb0f) [x86_64-linux]
   Full Path   /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/bin/ruby
@@ -141,8 +149,8 @@ Tools
 ## Bundler Build Metadata
 
 ```
-Timestamp  2025-07-16
-Git SHA    24a46f4f3d6
+Timestamp  2025-09-09
+Git SHA    b463ced1459
 ```
 
 ## Gemfile
@@ -1158,7 +1166,7 @@ DEPENDENCIES
   websocket-client-simple
 
 BUNDLED WITH
-   2.7.0
+   2.7.2
 ```
 
 ## Gemspecs
