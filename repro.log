@@ -1,0 +1,1224 @@
+Removing gems from /home/flavorjones/tmp/repro-bundler-deadlock/rails/Gemfile
+nokogiri (>= 1.8.1, != 1.11.0) ruby, windows was removed.
+Fetching gem metadata from https://rubygems.org/.........
+Resolving dependencies...
+Fetching gem metadata from https://rubygems.org/.........
+Resolving dependencies...
+--- ERROR REPORT TEMPLATE -------------------------------------------------------
+
+```
+fatal: No live threads left. Deadlock?
+22 threads, 22 sleeps current:0x0000559d3d34dde0 main thread:0x0000559d3c5b2900
+* #<Thread:0x00007f8c28e5a6a8 sleep_forever>
+   rb_thread_t:0x0000559d3c5b2900 native:0x00007f8c296ffc00 int:0
+   
+* #<Thread:0x00007f8c0cc4d0c0@Gem::Timeout stdlib thread /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/3.4.0/rubygems/vendor/timeout/lib/timeout.rb:95 sleep_forever>
+   rb_thread_t:0x0000559d3d34dde0 native:0x00007f8c0bf5e6c0 int:0
+   
+* #<Thread:0x00007f8ba80cce08@Parallel Installer Worker #0 /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.0/lib/bundler/worker.rb:90 sleep_forever>
+   rb_thread_t:0x0000559d406f4a80 native:0x00007f8bfa7e46c0 int:0
+   
+* #<Thread:0x00007f8ba80ccd18@Parallel Installer Worker #1 /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.0/lib/bundler/worker.rb:90 sleep_forever>
+   rb_thread_t:0x0000559d406e28a0 native:0x00007f8bf9fdc6c0 int:0
+   
+* #<Thread:0x00007f8ba80ccc28@Parallel Installer Worker #2 /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.0/lib/bundler/worker.rb:90 sleep_forever>
+   rb_thread_t:0x0000559d406ce2c0 native:0x00007f8bfa6e36c0 int:0
+   
+* #<Thread:0x00007f8ba80ccb38@Parallel Installer Worker #3 /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.0/lib/bundler/worker.rb:90 sleep_forever>
+   rb_thread_t:0x0000559d406e1580 native:0x00007f8bfa5e26c0 int:0
+   
+* #<Thread:0x00007f8ba80cca48@Parallel Installer Worker #4 /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.0/lib/bundler/worker.rb:90 sleep_forever>
+   rb_thread_t:0x0000559d406b0b10 native:0x00007f8bfa4e16c0 int:0
+   
+* #<Thread:0x00007f8ba80cc958@Parallel Installer Worker #5 /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.0/lib/bundler/worker.rb:90 sleep_forever>
+   rb_thread_t:0x0000559d40735b70 native:0x00007f8bfa8e56c0 int:0
+   
+* #<Thread:0x00007f8ba80cc868@Parallel Installer Worker #6 /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.0/lib/bundler/worker.rb:90 sleep_forever>
+   rb_thread_t:0x0000559d40711f20 native:0x00007f8bfaae76c0 int:0
+   
+* #<Thread:0x00007f8ba80cc778@Parallel Installer Worker #7 /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.0/lib/bundler/worker.rb:90 sleep_forever>
+   rb_thread_t:0x0000559d40724ac0 native:0x00007f8bfaeeb6c0 int:0
+   
+* #<Thread:0x00007f8ba80cc688@Parallel Installer Worker #8 /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.0/lib/bundler/worker.rb:90 sleep_forever>
+   rb_thread_t:0x0000559d407c23d0 native:0x00007f8bfa0dd6c0 int:0
+   
+* #<Thread:0x00007f8ba80cc598@Parallel Installer Worker #9 /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.0/lib/bundler/worker.rb:90 sleep_forever>
+   rb_thread_t:0x0000559d40791780 native:0x00007f8bfb0ed6c0 int:0
+   
+* #<Thread:0x00007f8ba80cc4a8@Parallel Installer Worker #10 /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.0/lib/bundler/worker.rb:90 sleep_forever>
+   rb_thread_t:0x0000559d40783e90 native:0x00007f8bfa2df6c0 int:0
+   
+* #<Thread:0x00007f8bf957c740@Parallel Installer Worker #11 /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.0/lib/bundler/worker.rb:90 sleep_forever>
+   rb_thread_t:0x0000559d3de5df30 native:0x00007f8bface96c0 int:0
+   
+* #<Thread:0x00007f8bf957a1e8@Parallel Installer Worker #12 /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.0/lib/bundler/worker.rb:90 sleep_forever>
+   rb_thread_t:0x0000559d3de5f120 native:0x00007f8bfabe86c0 int:0
+   
+* #<Thread:0x00007f8bf9573a28@Parallel Installer Worker #13 /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.0/lib/bundler/worker.rb:90 sleep_forever>
+   rb_thread_t:0x0000559d3de5ee90 native:0x00007f8bfafec6c0 int:0
+   
+* #<Thread:0x00007f8bf95713e0@Parallel Installer Worker #14 /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.0/lib/bundler/worker.rb:90 sleep_forever>
+   rb_thread_t:0x0000559d3de5ec00 native:0x00007f8bfb1ee6c0 int:0
+   
+* #<Thread:0x00007f8bf958dec8@Parallel Installer Worker #15 /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.0/lib/bundler/worker.rb:90 sleep_forever>
+   rb_thread_t:0x0000559d3de5e970 native:0x00007f8bfa1de6c0 int:0
+   
+* #<Thread:0x00007f8bf958b8d0@Parallel Installer Worker #16 /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.0/lib/bundler/worker.rb:90 sleep_forever>
+   rb_thread_t:0x0000559d3de5e6e0 native:0x00007f8bfb2ef6c0 int:0
+   
+* #<Thread:0x00007f8bf958a908@Parallel Installer Worker #17 /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.0/lib/bundler/worker.rb:90 sleep_forever>
+   rb_thread_t:0x0000559d3de5e450 native:0x00007f8bfadea6c0 int:0
+   
+* #<Thread:0x00007f8bf9586420@Parallel Installer Worker #18 /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.0/lib/bundler/worker.rb:90 sleep_forever>
+   rb_thread_t:0x0000559d3de5e1c0 native:0x00007f8bfa3e06c0 int:0
+   
+* #<Thread:0x00007f8bf9584648@Parallel Installer Worker #19 /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.0/lib/bundler/worker.rb:90 sleep_forever>
+   rb_thread_t:0x0000559d3e7a3e90 native:0x00007f8bfa9e66c0 int:0
+   
+
+  <internal:thread_sync>:18:in 'Thread::Queue#pop'
+          /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.0/lib/bundler/worker.rb:42:in 'Bundler::Worker#deq'
+          /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.0/lib/bundler/installer/parallel_installer.rb:151:in 'Bundler::ParallelInstaller#process_specs'
+          /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.0/lib/bundler/installer/parallel_installer.rb:111:in 'Bundler::ParallelInstaller#install_with_worker'
+          /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.0/lib/bundler/installer/parallel_installer.rb:92:in 'Bundler::ParallelInstaller#call'
+          /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.0/lib/bundler/installer/parallel_installer.rb:66:in 'Bundler::ParallelInstaller.call'
+          /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.0/lib/bundler/installer.rb:199:in 'Bundler::Installer#install'
+          /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/site_ruby/rubygems_plugin.rb:24:in 'ReshimInstaller#install'
+          /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.0/lib/bundler/installer.rb:84:in 'block in Bundler::Installer#run'
+          /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/3.4.0/rubygems.rb:835:in 'block in Gem.open_file_with_flock'
+          /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/3.4.0/rubygems.rb:823:in 'IO.open'
+          /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/3.4.0/rubygems.rb:823:in 'Gem.open_file_with_flock'
+          /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/3.4.0/rubygems.rb:809:in 'Gem.open_file_with_lock'
+          /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.0/lib/bundler/process_lock.rb:13:in 'block in Bundler::ProcessLock.lock'
+          /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.0/lib/bundler/shared_helpers.rb:105:in 'Bundler::SharedHelpers#filesystem_access'
+          /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.0/lib/bundler/process_lock.rb:12:in 'Bundler::ProcessLock.lock'
+          /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.0/lib/bundler/installer.rb:71:in 'Bundler::Installer#run'
+          /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.0/lib/bundler/installer.rb:23:in 'Bundler::Installer.install'
+          /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.0/lib/bundler/cli/install.rb:74:in 'Bundler::CLI::Install#run'
+          /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.0/lib/bundler/cli.rb:247:in 'block in Bundler::CLI#install'
+          /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.0/lib/bundler/settings.rb:157:in 'Bundler::Settings#temporary'
+          /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.0/lib/bundler/cli.rb:246:in 'Bundler::CLI#install'
+          /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.0/lib/bundler/vendor/thor/lib/thor/command.rb:28:in 'Bundler::Thor::Command#run'
+          /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.0/lib/bundler/vendor/thor/lib/thor/invocation.rb:127:in 'Bundler::Thor::Invocation#invoke_command'
+          /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.0/lib/bundler/vendor/thor/lib/thor.rb:538:in 'Bundler::Thor.dispatch'
+          /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.0/lib/bundler/cli.rb:35:in 'Bundler::CLI.dispatch'
+          /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.0/lib/bundler/vendor/thor/lib/thor/base.rb:584:in 'Bundler::Thor::Base::ClassMethods#start'
+          /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.0/lib/bundler/cli.rb:29:in 'Bundler::CLI.start'
+          /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.0/exe/bundle:28:in 'block in <top (required)>'
+          /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.0/lib/bundler/friendly_errors.rb:118:in 'Bundler.with_friendly_errors'
+          /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0/gems/bundler-2.7.0/exe/bundle:20:in '<top (required)>'
+          /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/bin/bundle:25:in 'Kernel#load'
+          /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/bin/bundle:25:in '<main>'
+
+```
+
+## Environment
+
+```
+Bundler       2.7.0
+  Platforms   ruby, x86_64-linux
+Ruby          3.4.5p51 (2025-07-16 revision 20cda200d3ce092571d0b5d342dadca69636cb0f) [x86_64-linux]
+  Full Path   /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/bin/ruby
+  Config Dir  /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/etc
+RubyGems      3.6.9
+  Gem Home    /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0
+  Gem Path    /home/flavorjones/.local/share/gem/ruby/3.4.0:/home/flavorjones/.local/share/mise/installs/ruby/3.4.5/lib/ruby/gems/3.4.0
+  User Home   /home/flavorjones
+  User Path   /home/flavorjones/.local/share/gem/ruby/3.4.0
+  Bin Dir     /home/flavorjones/.local/share/mise/installs/ruby/3.4.5/bin
+OpenSSL       
+  Compiled    OpenSSL 3.5.2 5 Aug 2025
+  Loaded      OpenSSL 3.5.2 5 Aug 2025
+  Cert File   /etc/ssl/cert.pem
+  Cert Dir    /etc/ssl/certs
+Tools         
+  Git         2.51.0
+  RVM         not installed
+  rbenv       not installed
+  chruby      not installed
+```
+
+## Bundler Build Metadata
+
+```
+Timestamp  2025-07-16
+Git SHA    24a46f4f3d6
+```
+
+## Gemfile
+
+### Gemfile
+
+```ruby
+# frozen_string_literal: true
+
+source "https://rubygems.org"
+gemspec
+
+gem "minitest"
+
+# We need a newish Rake since Active Job sets its test tasks' descriptions.
+gem "rake", ">= 13"
+
+gem "releaser", path: "tools/releaser"
+
+gem "sprockets-rails", ">= 2.0.0", require: false
+gem "propshaft", ">= 0.1.7", "!= 1.0.1"
+gem "capybara", ">= 3.39"
+gem "selenium-webdriver", ">= 4.20.0"
+
+gem "rack-cache", "~> 1.2"
+gem "stimulus-rails"
+gem "turbo-rails"
+gem "jsbundling-rails"
+gem "cssbundling-rails"
+gem "importmap-rails", ">= 1.2.3"
+gem "tailwindcss-rails"
+gem "dartsass-rails"
+gem "solid_cache"
+gem "solid_queue"
+gem "solid_cable"
+gem "kamal", ">= 2.1.0", require: false
+gem "thruster", require: false
+# require: false so bcrypt is loaded only when has_secure_password is used.
+# This is to avoid Active Model (and by extension the entire framework)
+# being dependent on a binary library.
+gem "bcrypt", "~> 3.1.11", require: false
+
+# This needs to be with require false to avoid it being automatically loaded by
+# sprockets.
+gem "terser", ">= 1.1.4", require: false
+
+# Explicitly avoid 1.x that doesn't support Ruby 2.4+
+gem "json", ">= 2.0.0", "!=2.7.0"
+
+# Workaround until all supported Ruby versions ship with uri version 0.13.1 or higher.
+gem "uri", ">= 0.13.1", require: false
+
+gem "prism"
+
+group :rubocop do
+  # Rubocop has to be locked in the Gemfile because CI ignores Gemfile.lock
+  # We don't want rubocop to start failing whenever rubocop makes a new release.
+  gem "rubocop", "1.79.2", require: false
+  gem "rubocop-minitest", require: false
+  gem "rubocop-packaging", require: false
+  gem "rubocop-performance", require: false
+  gem "rubocop-rails", require: false
+  gem "rubocop-md", require: false
+
+  # This gem is used in Railties tests so it must be a development dependency.
+  gem "rubocop-rails-omakase", require: false
+end
+
+group :mdl do
+  gem "mdl", "!= 0.13.0", require: false
+end
+
+group :doc do
+  gem "sdoc"
+  gem "rdoc", "< 6.10"
+  gem "redcarpet", "~> 3.6.1", platforms: :ruby
+  gem "w3c_validators", "~> 1.3.6"
+  gem "rouge"
+  # Workaround until https://github.com/rouge-ruby/rouge/pull/2131 is merged and released
+  gem "cgi", require: false
+  gem "rubyzip", "~> 2.0"
+end
+
+# Active Support
+gem "dalli", ">= 3.0.1"
+gem "listen", "~> 3.3", require: false
+gem "libxml-ruby", platforms: :ruby
+gem "connection_pool", require: false
+gem "rexml", require: false
+gem "msgpack", ">= 1.7.0", require: false
+
+# for railties
+gem "bootsnap", ">= 1.4.4", require: false
+gem "webrick", require: false
+gem "jbuilder", require: false
+gem "web-console", require: false
+
+# Action Pack and railties
+rack_version = ENV.fetch("RACK", "~> 3.0")
+if rack_version != "head"
+  gem "rack", rack_version
+else
+  gem "rack", git: "https://github.com/rack/rack.git", branch: "main"
+end
+
+gem "useragent", require: false
+
+# Active Job
+group :job do
+  gem "resque", require: false
+  gem "resque-scheduler", require: false
+  gem "sidekiq", require: false
+  gem "queue_classic", ">= 4.0.0", require: false, platforms: :ruby
+  gem "sneakers", require: false
+  gem "backburner", require: false
+end
+
+# Action Cable
+group :cable do
+  gem "puma", ">= 5.0.3", require: false
+
+  gem "redis", ">= 4.0.1", require: false
+
+  gem "redis-namespace"
+
+  gem "websocket-client-simple", require: false
+end
+
+# Active Storage
+group :storage do
+  gem "aws-sdk-s3", require: false
+  gem "google-cloud-storage", "~> 1.11", require: false
+
+  gem "image_processing", "~> 1.2"
+end
+
+# Action Mailbox
+gem "aws-sdk-sns", require: false
+gem "webmock"
+
+# Add your own local bundler stuff.
+local_gemfile = File.expand_path(".Gemfile", __dir__)
+instance_eval File.read local_gemfile if File.exist? local_gemfile
+
+group :test do
+  gem "minitest-bisect", require: false
+  gem "minitest-ci", require: false
+  gem "minitest-retry"
+
+  platforms :mri do
+    gem "stackprof"
+    gem "debug", ">= 1.1.0", require: false
+  end
+
+  # Needed for Railties tests because it is included in generated apps.
+  gem "brakeman"
+  gem "bundler-audit"
+end
+
+platforms :ruby, :windows do
+
+  # Active Record.
+  gem "sqlite3", ">= 2.1"
+
+  group :db do
+    gem "pg", "~> 1.3"
+    gem "mysql2", "~> 0.5"
+    gem "trilogy", ">= 2.7.0"
+  end
+end
+
+gem "tzinfo-data", platforms: [:windows, :jruby]
+gem "wdm", ">= 0.1.0", platforms: [:windows]
+
+gem "launchy"
+
+gem "nokogiri", "~> 1.18", path: "../nokogiri"
+```
+
+### Gemfile.lock
+
+```
+PATH
+  remote: ../nokogiri
+  specs:
+    nokogiri (1.18.9)
+      mini_portile2 (~> 2.8.2)
+      racc (~> 1.4)
+    nokogiri (1.18.9-aarch64-linux-gnu)
+      racc (~> 1.4)
+    nokogiri (1.18.9-aarch64-linux-musl)
+      racc (~> 1.4)
+    nokogiri (1.18.9-arm-linux-gnu)
+      racc (~> 1.4)
+    nokogiri (1.18.9-arm-linux-musl)
+      racc (~> 1.4)
+    nokogiri (1.18.9-arm64-darwin)
+      racc (~> 1.4)
+    nokogiri (1.18.9-x86_64-darwin)
+      racc (~> 1.4)
+    nokogiri (1.18.9-x86_64-linux-gnu)
+      racc (~> 1.4)
+    nokogiri (1.18.9-x86_64-linux-musl)
+      racc (~> 1.4)
+
+PATH
+  remote: .
+  specs:
+    actioncable (8.1.0.beta1)
+      actionpack (= 8.1.0.beta1)
+      activesupport (= 8.1.0.beta1)
+      nio4r (~> 2.0)
+      websocket-driver (>= 0.6.1)
+      zeitwerk (~> 2.6)
+    actionmailbox (8.1.0.beta1)
+      actionpack (= 8.1.0.beta1)
+      activejob (= 8.1.0.beta1)
+      activerecord (= 8.1.0.beta1)
+      activestorage (= 8.1.0.beta1)
+      activesupport (= 8.1.0.beta1)
+      mail (>= 2.8.0)
+    actionmailer (8.1.0.beta1)
+      actionpack (= 8.1.0.beta1)
+      actionview (= 8.1.0.beta1)
+      activejob (= 8.1.0.beta1)
+      activesupport (= 8.1.0.beta1)
+      mail (>= 2.8.0)
+      rails-dom-testing (~> 2.2)
+    actionpack (8.1.0.beta1)
+      actionview (= 8.1.0.beta1)
+      activesupport (= 8.1.0.beta1)
+      nokogiri (>= 1.8.5)
+      rack (>= 2.2.4)
+      rack-session (>= 1.0.1)
+      rack-test (>= 0.6.3)
+      rails-dom-testing (~> 2.2)
+      rails-html-sanitizer (~> 1.6)
+      useragent (~> 0.16)
+    actiontext (8.1.0.beta1)
+      action_text-trix (~> 2.1.15)
+      actionpack (= 8.1.0.beta1)
+      activerecord (= 8.1.0.beta1)
+      activestorage (= 8.1.0.beta1)
+      activesupport (= 8.1.0.beta1)
+      globalid (>= 0.6.0)
+      nokogiri (>= 1.8.5)
+    actionview (8.1.0.beta1)
+      activesupport (= 8.1.0.beta1)
+      builder (~> 3.1)
+      erubi (~> 1.11)
+      rails-dom-testing (~> 2.2)
+      rails-html-sanitizer (~> 1.6)
+    activejob (8.1.0.beta1)
+      activesupport (= 8.1.0.beta1)
+      globalid (>= 0.3.6)
+    activemodel (8.1.0.beta1)
+      activesupport (= 8.1.0.beta1)
+    activerecord (8.1.0.beta1)
+      activemodel (= 8.1.0.beta1)
+      activesupport (= 8.1.0.beta1)
+      timeout (>= 0.4.0)
+    activestorage (8.1.0.beta1)
+      actionpack (= 8.1.0.beta1)
+      activejob (= 8.1.0.beta1)
+      activerecord (= 8.1.0.beta1)
+      activesupport (= 8.1.0.beta1)
+      marcel (~> 1.0)
+    activesupport (8.1.0.beta1)
+      base64
+      benchmark (>= 0.3)
+      bigdecimal
+      concurrent-ruby (~> 1.0, >= 1.3.1)
+      connection_pool (>= 2.2.5)
+      drb
+      i18n (>= 1.6, < 2)
+      logger (>= 1.4.2)
+      minitest (>= 5.1)
+      securerandom (>= 0.3)
+      tzinfo (~> 2.0, >= 2.0.5)
+      uri (>= 0.13.1)
+    rails (8.1.0.beta1)
+      actioncable (= 8.1.0.beta1)
+      actionmailbox (= 8.1.0.beta1)
+      actionmailer (= 8.1.0.beta1)
+      actionpack (= 8.1.0.beta1)
+      actiontext (= 8.1.0.beta1)
+      actionview (= 8.1.0.beta1)
+      activejob (= 8.1.0.beta1)
+      activemodel (= 8.1.0.beta1)
+      activerecord (= 8.1.0.beta1)
+      activestorage (= 8.1.0.beta1)
+      activesupport (= 8.1.0.beta1)
+      bundler (>= 1.15.0)
+      railties (= 8.1.0.beta1)
+    railties (8.1.0.beta1)
+      actionpack (= 8.1.0.beta1)
+      activesupport (= 8.1.0.beta1)
+      irb (~> 1.13)
+      rackup (>= 1.0.0)
+      rake (>= 12.2)
+      thor (~> 1.0, >= 1.2.2)
+      tsort (>= 0.2)
+      zeitwerk (~> 2.6)
+
+PATH
+  remote: tools/releaser
+  specs:
+    releaser (1.0.0)
+      minitest
+      rake (~> 13.0)
+      sigstore-cli
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    action_text-trix (2.1.15)
+      railties
+    addressable (2.8.7)
+      public_suffix (>= 2.0.2, < 7.0)
+    amq-protocol (2.3.2)
+    ast (2.4.2)
+    aws-eventstream (1.4.0)
+    aws-partitions (1.1150.0)
+    aws-sdk-core (3.230.0)
+      aws-eventstream (~> 1, >= 1.3.0)
+      aws-partitions (~> 1, >= 1.992.0)
+      aws-sigv4 (~> 1.9)
+      base64
+      bigdecimal
+      jmespath (~> 1, >= 1.6.1)
+      logger
+    aws-sdk-kms (1.110.0)
+      aws-sdk-core (~> 3, >= 3.228.0)
+      aws-sigv4 (~> 1.5)
+    aws-sdk-s3 (1.197.0)
+      aws-sdk-core (~> 3, >= 3.228.0)
+      aws-sdk-kms (~> 1)
+      aws-sigv4 (~> 1.5)
+    aws-sdk-sns (1.92.0)
+      aws-sdk-core (~> 3, >= 3.210.0)
+      aws-sigv4 (~> 1.5)
+    aws-sigv4 (1.12.1)
+      aws-eventstream (~> 1, >= 1.0.2)
+    backburner (1.6.1)
+      beaneater (~> 1.0)
+      concurrent-ruby (~> 1.0, >= 1.0.1)
+      dante (> 0.1.5)
+    base64 (0.3.0)
+    bcrypt (3.1.20)
+    bcrypt_pbkdf (1.1.1)
+    beaneater (1.1.3)
+    benchmark (0.4.1)
+    bigdecimal (3.2.3)
+    bindex (0.8.1)
+    bootsnap (1.18.4)
+      msgpack (~> 1.2)
+    brakeman (7.0.0)
+      racc
+    builder (3.3.0)
+    bundler-audit (0.9.2)
+      bundler (>= 1.2.0, < 3)
+      thor (~> 1.0)
+    bunny (2.23.0)
+      amq-protocol (~> 2.3, >= 2.3.1)
+      sorted_set (~> 1, >= 1.0.2)
+    capybara (3.40.0)
+      addressable
+      matrix
+      mini_mime (>= 0.1.3)
+      nokogiri (~> 1.11)
+      rack (>= 1.6.0)
+      rack-test (>= 0.6.3)
+      regexp_parser (>= 1.5, < 3.0)
+      xpath (~> 3.2)
+    cgi (0.5.0)
+    chef-utils (18.6.2)
+      concurrent-ruby
+    childprocess (5.1.0)
+      logger (~> 1.5)
+    concurrent-ruby (1.3.5)
+    connection_pool (2.5.4)
+    crack (1.0.0)
+      bigdecimal
+      rexml
+    crass (1.0.6)
+    cssbundling-rails (1.4.1)
+      railties (>= 6.0.0)
+    dalli (3.2.8)
+    dante (0.2.0)
+    dartsass-rails (0.5.1)
+      railties (>= 6.0.0)
+      sass-embedded (~> 1.63)
+    date (3.4.1)
+    debug (1.10.0)
+      irb (~> 1.10)
+      reline (>= 0.3.8)
+    declarative (0.0.20)
+    digest-crc (0.6.5)
+      rake (>= 12.0.0, < 14.0.0)
+    dotenv (3.1.7)
+    drb (2.2.3)
+    ed25519 (1.3.0)
+    erubi (1.13.1)
+    et-orbi (1.2.11)
+      tzinfo
+    event_emitter (0.2.6)
+    execjs (2.10.0)
+    faraday (1.10.4)
+      faraday-em_http (~> 1.0)
+      faraday-em_synchrony (~> 1.0)
+      faraday-excon (~> 1.1)
+      faraday-httpclient (~> 1.0)
+      faraday-multipart (~> 1.0)
+      faraday-net_http (~> 1.0)
+      faraday-net_http_persistent (~> 1.0)
+      faraday-patron (~> 1.0)
+      faraday-rack (~> 1.0)
+      faraday-retry (~> 1.0)
+      ruby2_keywords (>= 0.0.4)
+    faraday-em_http (1.0.0)
+    faraday-em_synchrony (1.0.0)
+    faraday-excon (1.1.0)
+    faraday-httpclient (1.0.1)
+    faraday-multipart (1.1.0)
+      multipart-post (~> 2.0)
+    faraday-net_http (1.0.2)
+    faraday-net_http_persistent (1.2.0)
+    faraday-patron (1.0.0)
+    faraday-rack (1.0.0)
+    faraday-retry (1.0.3)
+    ffi (1.17.1)
+    ffi (1.17.1-aarch64-linux-gnu)
+    ffi (1.17.1-aarch64-linux-musl)
+    ffi (1.17.1-arm-linux-gnu)
+    ffi (1.17.1-arm-linux-musl)
+    ffi (1.17.1-arm64-darwin)
+    ffi (1.17.1-x86_64-darwin)
+    ffi (1.17.1-x86_64-linux-gnu)
+    ffi (1.17.1-x86_64-linux-musl)
+    fugit (1.11.1)
+      et-orbi (~> 1, >= 1.2.11)
+      raabro (~> 1.4)
+    globalid (1.2.1)
+      activesupport (>= 6.1)
+    google-apis-core (0.15.1)
+      addressable (~> 2.5, >= 2.5.1)
+      googleauth (~> 1.9)
+      httpclient (>= 2.8.3, < 3.a)
+      mini_mime (~> 1.0)
+      mutex_m
+      representable (~> 3.0)
+      retriable (>= 2.0, < 4.a)
+    google-apis-iamcredentials_v1 (0.22.0)
+      google-apis-core (>= 0.15.0, < 2.a)
+    google-apis-storage_v1 (0.49.0)
+      google-apis-core (>= 0.15.0, < 2.a)
+    google-cloud-core (1.7.1)
+      google-cloud-env (>= 1.0, < 3.a)
+      google-cloud-errors (~> 1.0)
+    google-cloud-env (2.2.1)
+      faraday (>= 1.0, < 3.a)
+    google-cloud-errors (1.4.0)
+    google-cloud-storage (1.54.0)
+      addressable (~> 2.8)
+      digest-crc (~> 0.4)
+      google-apis-core (~> 0.13)
+      google-apis-iamcredentials_v1 (~> 0.18)
+      google-apis-storage_v1 (~> 0.38)
+      google-cloud-core (~> 1.6)
+      googleauth (~> 1.9)
+      mini_mime (~> 1.0)
+    google-logging-utils (0.1.0)
+    google-protobuf (4.29.3)
+      bigdecimal
+      rake (>= 13)
+    google-protobuf (4.29.3-aarch64-linux)
+      bigdecimal
+      rake (>= 13)
+    google-protobuf (4.29.3-arm64-darwin)
+      bigdecimal
+      rake (>= 13)
+    google-protobuf (4.29.3-x86_64-darwin)
+      bigdecimal
+      rake (>= 13)
+    google-protobuf (4.29.3-x86_64-linux)
+      bigdecimal
+      rake (>= 13)
+    googleauth (1.12.2)
+      faraday (>= 1.0, < 3.a)
+      google-cloud-env (~> 2.2)
+      google-logging-utils (~> 0.1)
+      jwt (>= 1.4, < 3.0)
+      multi_json (~> 1.11)
+      os (>= 0.9, < 2.0)
+      signet (>= 0.16, < 2.a)
+    hashdiff (1.1.2)
+    httpclient (2.9.0)
+      mutex_m
+    i18n (1.14.7)
+      concurrent-ruby (~> 1.0)
+    image_processing (1.13.0)
+      mini_magick (>= 4.9.5, < 5)
+      ruby-vips (>= 2.0.17, < 3)
+    importmap-rails (2.1.0)
+      actionpack (>= 6.0.0)
+      activesupport (>= 6.0.0)
+      railties (>= 6.0.0)
+    io-console (0.8.1)
+    irb (1.15.2)
+      pp (>= 0.6.0)
+      rdoc (>= 4.0.0)
+      reline (>= 0.4.2)
+    jbuilder (2.13.0)
+      actionview (>= 5.0.0)
+      activesupport (>= 5.0.0)
+    jmespath (1.6.2)
+    jsbundling-rails (1.3.1)
+      railties (>= 6.0.0)
+    json (2.10.2)
+    jwt (2.10.1)
+      base64
+    kamal (2.4.0)
+      activesupport (>= 7.0)
+      base64 (~> 0.2)
+      bcrypt_pbkdf (~> 1.0)
+      concurrent-ruby (~> 1.2)
+      dotenv (~> 3.1)
+      ed25519 (~> 1.2)
+      net-ssh (~> 7.3)
+      sshkit (>= 1.23.0, < 2.0)
+      thor (~> 1.3)
+      zeitwerk (>= 2.6.18, < 3.0)
+    kramdown (2.5.1)
+      rexml (>= 3.3.9)
+    kramdown-parser-gfm (1.1.0)
+      kramdown (~> 2.0)
+    language_server-protocol (3.17.0.3)
+    launchy (3.0.1)
+      addressable (~> 2.8)
+      childprocess (~> 5.0)
+    libxml-ruby (5.0.4)
+    lint_roller (1.1.0)
+    listen (3.9.0)
+      rb-fsevent (~> 0.10, >= 0.10.3)
+      rb-inotify (~> 0.9, >= 0.9.10)
+    logger (1.7.0)
+    loofah (2.24.1)
+      crass (~> 1.0.2)
+      nokogiri (>= 1.12.0)
+    mail (2.8.1)
+      mini_mime (>= 0.1.1)
+      net-imap
+      net-pop
+      net-smtp
+    marcel (1.0.4)
+    matrix (0.4.2)
+    mdl (0.12.0)
+      kramdown (~> 2.3)
+      kramdown-parser-gfm (~> 1.1)
+      mixlib-cli (~> 2.1, >= 2.1.1)
+      mixlib-config (>= 2.2.1, < 4)
+      mixlib-shellout
+    mini_magick (4.13.2)
+    mini_mime (1.1.5)
+    mini_portile2 (2.8.9)
+    minitest (5.25.5)
+    minitest-bisect (1.7.0)
+      minitest-server (~> 1.0)
+      path_expander (~> 1.1)
+    minitest-ci (3.4.0)
+      minitest (>= 5.0.6)
+    minitest-retry (0.2.3)
+      minitest (>= 5.0)
+    minitest-server (1.0.8)
+      drb (~> 2.0)
+      minitest (~> 5.16)
+    mixlib-cli (2.1.8)
+    mixlib-config (3.0.27)
+      tomlrb
+    mixlib-shellout (3.3.4)
+      chef-utils
+    mono_logger (1.1.2)
+    msgpack (1.7.5)
+    multi_json (1.15.0)
+    multipart-post (2.4.1)
+    mustermann (3.0.4)
+      ruby2_keywords (~> 0.0.1)
+    mutex_m (0.3.0)
+    mysql2 (0.5.6)
+    net-http (0.6.0)
+      uri
+    net-imap (0.5.5)
+      date
+      net-protocol
+    net-pop (0.1.2)
+      net-protocol
+    net-protocol (0.2.2)
+      timeout
+    net-scp (4.0.0)
+      net-ssh (>= 2.6.5, < 8.0.0)
+    net-sftp (4.0.0)
+      net-ssh (>= 5.0.0, < 8.0.0)
+    net-smtp (0.5.1)
+      net-protocol
+    net-ssh (7.3.0)
+    nio4r (2.7.4)
+    os (1.1.4)
+    ostruct (0.6.1)
+    parallel (1.26.3)
+    parser (3.3.9.0)
+      ast (~> 2.4.1)
+      racc
+    path_expander (1.1.3)
+    pg (1.5.9)
+    pp (0.6.2)
+      prettyprint
+    prettyprint (0.2.0)
+    prism (1.4.0)
+    propshaft (1.2.0)
+      actionpack (>= 7.0.0)
+      activesupport (>= 7.0.0)
+      rack
+    protobug (0.1.0)
+    protobug_googleapis_field_behavior_protos (0.1.0)
+      protobug (= 0.1.0)
+      protobug_well_known_protos (= 0.1.0)
+    protobug_sigstore_protos (0.1.0)
+      protobug (= 0.1.0)
+      protobug_googleapis_field_behavior_protos (= 0.1.0)
+      protobug_well_known_protos (= 0.1.0)
+    protobug_well_known_protos (0.1.0)
+      protobug (= 0.1.0)
+    psych (5.2.6)
+      date
+      stringio
+    public_suffix (6.0.1)
+    puma (6.5.0)
+      nio4r (~> 2.0)
+    queue_classic (4.0.0)
+      pg (>= 1.1, < 2.0)
+    raabro (1.4.0)
+    racc (1.8.1)
+    rack (3.2.1)
+    rack-cache (1.17.0)
+      rack (>= 0.4)
+    rack-protection (4.1.1)
+      base64 (>= 0.1.0)
+      logger (>= 1.6.0)
+      rack (>= 3.0.0, < 4)
+    rack-session (2.1.1)
+      base64 (>= 0.1.0)
+      rack (>= 3.0.0)
+    rack-test (2.2.0)
+      rack (>= 1.3)
+    rackup (2.2.1)
+      rack (>= 3)
+    rails-dom-testing (2.3.0)
+      activesupport (>= 5.0.0)
+      minitest
+      nokogiri (>= 1.6)
+    rails-html-sanitizer (1.6.2)
+      loofah (~> 2.21)
+      nokogiri (>= 1.15.7, != 1.16.7, != 1.16.6, != 1.16.5, != 1.16.4, != 1.16.3, != 1.16.2, != 1.16.1, != 1.16.0.rc1, != 1.16.0)
+    rainbow (3.1.1)
+    rake (13.3.0)
+    rb-fsevent (0.11.2)
+    rb-inotify (0.11.1)
+      ffi (~> 1.0)
+    rbtree (0.4.6)
+    rdoc (6.9.1)
+      psych (>= 4.0.0)
+    redcarpet (3.6.1)
+    redis (5.4.1)
+      redis-client (>= 0.22.0)
+    redis-client (0.25.2)
+      connection_pool
+    redis-namespace (1.11.0)
+      redis (>= 4)
+    regexp_parser (2.10.0)
+    reline (0.6.1)
+      io-console (~> 0.5)
+    representable (3.2.0)
+      declarative (< 0.1.0)
+      trailblazer-option (>= 0.1.1, < 0.2.0)
+      uber (< 0.2.0)
+    resque (2.7.0)
+      mono_logger (~> 1)
+      multi_json (~> 1.0)
+      redis-namespace (~> 1.6)
+      sinatra (>= 0.9.2)
+    resque-scheduler (4.11.0)
+      mono_logger (~> 1.0)
+      redis (>= 3.3)
+      resque (>= 1.27)
+      rufus-scheduler (~> 3.2, != 3.3)
+    retriable (3.1.2)
+    rexml (3.4.0)
+    rouge (4.6.0)
+    rubocop (1.79.2)
+      json (~> 2.3)
+      language_server-protocol (~> 3.17.0.2)
+      lint_roller (~> 1.1.0)
+      parallel (~> 1.10)
+      parser (>= 3.3.0.2)
+      rainbow (>= 2.2.2, < 4.0)
+      regexp_parser (>= 2.9.3, < 3.0)
+      rubocop-ast (>= 1.46.0, < 2.0)
+      ruby-progressbar (~> 1.7)
+      unicode-display_width (>= 2.4.0, < 4.0)
+    rubocop-ast (1.46.0)
+      parser (>= 3.3.7.2)
+      prism (~> 1.4)
+    rubocop-md (2.0.1)
+      lint_roller (~> 1.1)
+      rubocop (>= 1.72.1)
+    rubocop-minitest (0.37.1)
+      lint_roller (~> 1.1)
+      rubocop (>= 1.72.1, < 2.0)
+      rubocop-ast (>= 1.38.0, < 2.0)
+    rubocop-packaging (0.6.0)
+      lint_roller (~> 1.1.0)
+      rubocop (>= 1.72.1, < 2.0)
+    rubocop-performance (1.24.0)
+      lint_roller (~> 1.1)
+      rubocop (>= 1.72.1, < 2.0)
+      rubocop-ast (>= 1.38.0, < 2.0)
+    rubocop-rails (2.30.3)
+      activesupport (>= 4.2.0)
+      lint_roller (~> 1.1)
+      rack (>= 1.1)
+      rubocop (>= 1.72.1, < 2.0)
+      rubocop-ast (>= 1.38.0, < 2.0)
+    rubocop-rails-omakase (1.0.0)
+      rubocop
+      rubocop-minitest
+      rubocop-performance
+      rubocop-rails
+    ruby-progressbar (1.13.0)
+    ruby-vips (2.2.2)
+      ffi (~> 1.12)
+      logger
+    ruby2_keywords (0.0.5)
+    rubyzip (2.4.1)
+    rufus-scheduler (3.9.2)
+      fugit (~> 1.1, >= 1.11.1)
+    sass-embedded (1.83.4)
+      google-protobuf (~> 4.29)
+      rake (>= 13)
+    sass-embedded (1.83.4-aarch64-linux-gnu)
+      google-protobuf (~> 4.29)
+    sass-embedded (1.83.4-aarch64-linux-musl)
+      google-protobuf (~> 4.29)
+    sass-embedded (1.83.4-arm-linux-gnueabihf)
+      google-protobuf (~> 4.29)
+    sass-embedded (1.83.4-arm-linux-musleabihf)
+      google-protobuf (~> 4.29)
+    sass-embedded (1.83.4-arm64-darwin)
+      google-protobuf (~> 4.29)
+    sass-embedded (1.83.4-x86_64-darwin)
+      google-protobuf (~> 4.29)
+    sass-embedded (1.83.4-x86_64-linux-gnu)
+      google-protobuf (~> 4.29)
+    sass-embedded (1.83.4-x86_64-linux-musl)
+      google-protobuf (~> 4.29)
+    sdoc (2.6.2)
+      rdoc (>= 5.0)
+    securerandom (0.4.1)
+    selenium-webdriver (4.32.0)
+      base64 (~> 0.2)
+      logger (~> 1.4)
+      rexml (~> 3.2, >= 3.2.5)
+      rubyzip (>= 1.2.2, < 3.0)
+      websocket (~> 1.0)
+    serverengine (2.0.7)
+      sigdump (~> 0.2.2)
+    set (1.1.2)
+    sidekiq (8.0.7)
+      connection_pool (>= 2.5.0)
+      json (>= 2.9.0)
+      logger (>= 1.6.2)
+      rack (>= 3.1.0)
+      redis-client (>= 0.23.2)
+    sigdump (0.2.5)
+    signet (0.19.0)
+      addressable (~> 2.8)
+      faraday (>= 0.17.5, < 3.a)
+      jwt (>= 1.5, < 3.0)
+      multi_json (~> 1.10)
+    sigstore (0.2.1)
+      net-http
+      protobug_sigstore_protos (~> 0.1.0)
+      uri
+    sigstore-cli (0.2.1)
+      sigstore (= 0.2.1)
+      thor
+    sinatra (4.1.1)
+      logger (>= 1.6.0)
+      mustermann (~> 3.0)
+      rack (>= 3.0.0, < 4)
+      rack-protection (= 4.1.1)
+      rack-session (>= 2.0.0, < 3)
+      tilt (~> 2.0)
+    sneakers (2.11.0)
+      bunny (~> 2.12)
+      concurrent-ruby (~> 1.0)
+      rake
+      serverengine (~> 2.0.5)
+      thor
+    solid_cable (3.0.5)
+      actioncable (>= 7.2)
+      activejob (>= 7.2)
+      activerecord (>= 7.2)
+      railties (>= 7.2)
+    solid_cache (1.0.6)
+      activejob (>= 7.2)
+      activerecord (>= 7.2)
+      railties (>= 7.2)
+    solid_queue (1.1.2)
+      activejob (>= 7.1)
+      activerecord (>= 7.1)
+      concurrent-ruby (>= 1.3.1)
+      fugit (~> 1.11.0)
+      railties (>= 7.1)
+      thor (~> 1.3.1)
+    sorted_set (1.0.3)
+      rbtree
+      set (~> 1.0)
+    sprockets (4.2.1)
+      concurrent-ruby (~> 1.0)
+      rack (>= 2.2.4, < 4)
+    sprockets-rails (3.5.2)
+      actionpack (>= 6.1)
+      activesupport (>= 6.1)
+      sprockets (>= 3.0.0)
+    sqlite3 (2.5.0)
+      mini_portile2 (~> 2.8.0)
+    sqlite3 (2.5.0-aarch64-linux-gnu)
+    sqlite3 (2.5.0-aarch64-linux-musl)
+    sqlite3 (2.5.0-arm-linux-gnu)
+    sqlite3 (2.5.0-arm-linux-musl)
+    sqlite3 (2.5.0-arm64-darwin)
+    sqlite3 (2.5.0-x86_64-darwin)
+    sqlite3 (2.5.0-x86_64-linux-gnu)
+    sqlite3 (2.5.0-x86_64-linux-musl)
+    sshkit (1.23.2)
+      base64
+      net-scp (>= 1.1.2)
+      net-sftp (>= 2.1.2)
+      net-ssh (>= 2.8.0)
+      ostruct
+    stackprof (0.2.27)
+    stimulus-rails (1.3.4)
+      railties (>= 6.0.0)
+    stringio (3.1.7)
+    tailwindcss-rails (3.2.0)
+      railties (>= 7.0.0)
+      tailwindcss-ruby
+    tailwindcss-ruby (3.4.17)
+    tailwindcss-ruby (3.4.17-aarch64-linux)
+    tailwindcss-ruby (3.4.17-arm-linux)
+    tailwindcss-ruby (3.4.17-arm64-darwin)
+    tailwindcss-ruby (3.4.17-x86_64-darwin)
+    tailwindcss-ruby (3.4.17-x86_64-linux)
+    terser (1.2.4)
+      execjs (>= 0.3.0, < 3)
+    thor (1.3.2)
+    thruster (0.1.10)
+    thruster (0.1.10-aarch64-linux)
+    thruster (0.1.10-arm64-darwin)
+    thruster (0.1.10-x86_64-darwin)
+    thruster (0.1.10-x86_64-linux)
+    tilt (2.6.1)
+    timeout (0.4.3)
+    tomlrb (2.0.3)
+    trailblazer-option (0.1.2)
+    trilogy (2.9.0)
+    tsort (0.2.0)
+    turbo-rails (2.0.11)
+      actionpack (>= 6.0.0)
+      railties (>= 6.0.0)
+    tzinfo (2.0.6)
+      concurrent-ruby (~> 1.0)
+    uber (0.1.0)
+    unicode-display_width (3.1.4)
+      unicode-emoji (~> 4.0, >= 4.0.4)
+    unicode-emoji (4.0.4)
+    uri (1.0.3)
+    useragent (0.16.11)
+    w3c_validators (1.3.7)
+      json (>= 1.8)
+      nokogiri (~> 1.6)
+      rexml (~> 3.2)
+    web-console (4.2.1)
+      actionview (>= 6.0.0)
+      activemodel (>= 6.0.0)
+      bindex (>= 0.4.0)
+      railties (>= 6.0.0)
+    webmock (3.25.0)
+      addressable (>= 2.8.0)
+      crack (>= 0.3.2)
+      hashdiff (>= 0.4.0, < 2.0.0)
+    webrick (1.9.1)
+    websocket (1.2.11)
+    websocket-client-simple (0.9.0)
+      base64
+      event_emitter
+      mutex_m
+      websocket
+    websocket-driver (0.7.7)
+      base64
+      websocket-extensions (>= 0.1.0)
+    websocket-extensions (0.1.5)
+    xpath (3.2.0)
+      nokogiri (~> 1.8)
+    zeitwerk (2.7.3)
+
+PLATFORMS
+  aarch64-linux
+  aarch64-linux-gnu
+  aarch64-linux-musl
+  arm-linux-gnu
+  arm-linux-musl
+  arm64-darwin
+  ruby
+  x86_64-darwin
+  x86_64-linux
+  x86_64-linux-gnu
+  x86_64-linux-musl
+
+DEPENDENCIES
+  aws-sdk-s3
+  aws-sdk-sns
+  backburner
+  bcrypt (~> 3.1.11)
+  bootsnap (>= 1.4.4)
+  brakeman
+  bundler-audit
+  capybara (>= 3.39)
+  cgi
+  connection_pool
+  cssbundling-rails
+  dalli (>= 3.0.1)
+  dartsass-rails
+  debug (>= 1.1.0)
+  google-cloud-storage (~> 1.11)
+  image_processing (~> 1.2)
+  importmap-rails (>= 1.2.3)
+  jbuilder
+  jsbundling-rails
+  json (>= 2.0.0, != 2.7.0)
+  kamal (>= 2.1.0)
+  launchy
+  libxml-ruby
+  listen (~> 3.3)
+  mdl (!= 0.13.0)
+  minitest
+  minitest-bisect
+  minitest-ci
+  minitest-retry
+  msgpack (>= 1.7.0)
+  mysql2 (~> 0.5)
+  nokogiri!
+  pg (~> 1.3)
+  prism
+  propshaft (>= 0.1.7, != 1.0.1)
+  puma (>= 5.0.3)
+  queue_classic (>= 4.0.0)
+  rack (~> 3.0)
+  rack-cache (~> 1.2)
+  rails!
+  rake (>= 13)
+  rdoc (< 6.10)
+  redcarpet (~> 3.6.1)
+  redis (>= 4.0.1)
+  redis-namespace
+  releaser!
+  resque
+  resque-scheduler
+  rexml
+  rouge
+  rubocop (= 1.79.2)
+  rubocop-md
+  rubocop-minitest
+  rubocop-packaging
+  rubocop-performance
+  rubocop-rails
+  rubocop-rails-omakase
+  rubyzip (~> 2.0)
+  sdoc
+  selenium-webdriver (>= 4.20.0)
+  sidekiq
+  sneakers
+  solid_cable
+  solid_cache
+  solid_queue
+  sprockets-rails (>= 2.0.0)
+  sqlite3 (>= 2.1)
+  stackprof
+  stimulus-rails
+  tailwindcss-rails
+  terser (>= 1.1.4)
+  thruster
+  trilogy (>= 2.7.0)
+  turbo-rails
+  tzinfo-data
+  uri (>= 0.13.1)
+  useragent
+  w3c_validators (~> 1.3.6)
+  wdm (>= 0.1.0)
+  web-console
+  webmock
+  webrick
+  websocket-client-simple
+
+BUNDLED WITH
+   2.7.0
+```
+
+## Gemspecs
+
+### rails.gemspec
+
+```ruby
+# frozen_string_literal: true
+
+version = File.read(File.expand_path("RAILS_VERSION", __dir__)).strip
+
+Gem::Specification.new do |s|
+  s.platform    = Gem::Platform::RUBY
+  s.name        = "rails"
+  s.version     = version
+  s.summary     = "Full-stack web application framework."
+  s.description = "Ruby on Rails is a full-stack web framework optimized for programmer happiness and sustainable productivity. It encourages beautiful code by favoring convention over configuration."
+
+  s.required_ruby_version     = ">= 3.2.0"
+  s.required_rubygems_version = ">= 1.8.11"
+
+  s.license = "MIT"
+
+  s.author   = "David Heinemeier Hansson"
+  s.email    = "david@loudthinking.com"
+  s.homepage = "https://rubyonrails.org"
+
+  s.files = ["README.md", "MIT-LICENSE"]
+
+  s.metadata = {
+    "bug_tracker_uri"   => "https://github.com/rails/rails/issues",
+    "changelog_uri"     => "https://github.com/rails/rails/releases/tag/v#{version}",
+    "documentation_uri" => "https://api.rubyonrails.org/v#{version}/",
+    "mailing_list_uri"  => "https://discuss.rubyonrails.org/c/rubyonrails-talk",
+    "source_code_uri"   => "https://github.com/rails/rails/tree/v#{version}",
+    "rubygems_mfa_required" => "true",
+  }
+
+  s.add_dependency "activesupport", version
+  s.add_dependency "actionpack",    version
+  s.add_dependency "actionview",    version
+  s.add_dependency "activemodel",   version
+  s.add_dependency "activerecord",  version
+  s.add_dependency "actionmailer",  version
+  s.add_dependency "activejob",     version
+  s.add_dependency "actioncable",   version
+  s.add_dependency "activestorage", version
+  s.add_dependency "actionmailbox", version
+  s.add_dependency "actiontext",    version
+  s.add_dependency "railties",      version
+
+  s.add_dependency "bundler", ">= 1.15.0"
+end
+```
+
+--- TEMPLATE END ----------------------------------------------------------------
+
+Unfortunately, an unexpected error occurred, and Bundler cannot continue.
+
+First, try this link to see if there are any existing issue reports for this error:
+https://github.com/rubygems/rubygems/search?q=No+live+threads+left.+Deadlock%3F&type=Issues
+
+If there aren't any reports for this error yet, please fill in the new issue form located at https://github.com/rubygems/rubygems/issues/new?labels=Bundler&template=bundler-related-issue.md. Make sure to copy and paste the full output of this command under the "What happened instead?" section.
